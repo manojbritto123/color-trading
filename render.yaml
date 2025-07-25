@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: color-trade-backend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGO_URI
+        value: YOUR_MONGODB_URI
+      - key: JWT_SECRET
+        value: supersecretkey
